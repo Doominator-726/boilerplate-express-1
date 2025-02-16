@@ -19,7 +19,7 @@ let app = express();
 // # 4
 
 var abspath = __dirname + '/public';
-app.use(abspath, express.static());
+app.use("/public", express.static(abspath));
 
 
 
