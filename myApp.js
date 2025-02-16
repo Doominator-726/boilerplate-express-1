@@ -18,13 +18,14 @@ let app = express();
 
 // # 4
 
-var abspath = __dirname + '/public';
-app.use("/public", express.static(abspath));
+// var abspath = __dirname + '/public';
+// app.use("/public", express.static(abspath));
 
+// # 5
 
-
-
-
+app.get("/", function(req, res) {
+    res.json({"message": "Hello json"});
+  });
 
 
 
