@@ -12,6 +12,6 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "node --watch node server.js"
+    "start": "node server.js"
   }
 }
