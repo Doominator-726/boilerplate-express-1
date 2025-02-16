@@ -28,7 +28,7 @@ let app = express();
 app.get("/json", function(req, res) {
 
     var message = "Hello json";
-    if (process.env.VAR_NAME)
+    if (process.env.MESSAGE_STYLE == "uppercase")
     {
         message.toUpperCase();
     }
