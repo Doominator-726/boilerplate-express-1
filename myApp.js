@@ -27,9 +27,11 @@ app.use("/public", express.static(abspath));
 
 app.get("/json", function(req, res) {
 
+    console.log("WorkN");
     let message = "Hello json";
     if (process.env.MESSAGE_STYLE==="uppercase")
     {
+        console.log("Work");
         message = message.toUpperCase();
     }
 
