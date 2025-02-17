@@ -25,11 +25,6 @@ app.use("/public", express.static(abspath));
 
 // # 5
 
-app.use((req, res, next) => {
-    console.log(`${req.method} ${req.path} - ${req.ip}`);
-    next();
-  });
-  
 app.get("/json", function(req, res) {
 
     console.log("WorkN");
@@ -44,15 +39,12 @@ app.get("/json", function(req, res) {
     
   });
 
+// # 6
 
-
-
-
-
-
-
-
-
+app.use(function(req, res, next) {
+    console.log(`${req.method} ${req.path} - ${req.ip}`);
+    next();
+})
 
 
 
