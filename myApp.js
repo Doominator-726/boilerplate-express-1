@@ -27,15 +27,13 @@ let app = express();
 
 app.get("/json", function(req, res) {
 
-    var message = "Hello json";
-    if (process.env.MESSAGE_STYLE === "uppercase")
+    let message = "Hello json";
+    if (process.env.MESSAGE_STYLE==="uppercase")
     {
-        res.json({"message": "HELLO JSON"});
+        message = message.toUpperCase();
     }
-    else 
-    {
-        res.json({"message": "Hello json"});
-    }
+
+    res.json({"message": message});
     
   });
 
