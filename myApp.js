@@ -72,7 +72,14 @@ app.get("/json", function(req, res) {
 
 app.use("/", bodyParser.urlencoded({extended: false}))
 
+// # 12
 
+app.post("/name", function(req, res) {
 
+  var first = req.body.first;
+  var last = req.body.last;
 
- module.exports = app;
+  res.json({"name": `${first} ${last}`});
+})
+
+module.exports = app;
