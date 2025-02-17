@@ -58,8 +58,12 @@ app.get("/json", function(req, res) {
 
 // # 8
 
-app.get("/:word/echo", function(req, res) {
-    res.json({"echo": req.params.word});
+app.get("/name", function(req, res) {
+
+  var first = req.query.first;
+  var last = req.query.last;
+
+  res.json({"name": `${first} ${last}`});
 })
 
 
