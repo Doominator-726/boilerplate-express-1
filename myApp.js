@@ -25,7 +25,7 @@ app.use("/public", express.static(abspath));
 
 // # 5
 
-app.get("/json", function(req, res) {
+app.get("/", function(req, res) {
 
     console.log("WorkN");
     let message = "Hello json";
