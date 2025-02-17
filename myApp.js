@@ -23,6 +23,13 @@ let app = express();
 var abspath = __dirname + '/public';
 app.use("/public", express.static(abspath));
 
+// # 6
+
+app.use(function(req, res, next) {
+    console.log(`${req.method} ${req.path} - ${req.ip}`);
+    next();
+});
+
 // # 5
 
 app.get("/json", function(req, res) {
@@ -38,15 +45,7 @@ app.get("/json", function(req, res) {
     res.json({"message": message});
     
   });
-
-// # 6
-
-app.use(function(req, res, next) {
-    console.log(`${req.method} ${req.path} - ${req.ip}`);
-    next();
-});
-
-
+  
 
 
 
